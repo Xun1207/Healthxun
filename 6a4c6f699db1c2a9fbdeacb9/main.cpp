@@ -21,21 +21,23 @@ int main(int argc, char* argv[])
     LoginDialog loginDialog;
     MainWindow* mainWindow = nullptr;
 
+    // 按值捕获user，避免引用悬空
     QObject::connect(&loginDialog, &LoginDialog::loginSuccess, [&](const User& user) {
-        loginDialog.hide();
         mainWindow = new MainWindow(user);
         mainWindow->show();
+        loginDialog.hide();
     });
 
-    loginDialog.show();
-
-    int result = a.exec();
-
-    if (mainWindow) {
-        delete mainWindow;
+    if (loginDialog.exec() == QDialog::Accepted) {
+        // 登录成功后运行主循环
+        a.exec();
+        if (mainWindow) {
+            delete mainWindow;
+            mainWindow = nullptr;
+        }
     }
 
     SqliteHelper::getInstance()->closeDB();
 
-    return result;
+    return 0;
 }

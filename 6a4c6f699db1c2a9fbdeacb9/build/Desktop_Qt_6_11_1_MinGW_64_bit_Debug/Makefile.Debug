@@ -5898,7 +5898,9 @@ debug/LoginDialog.o: ../../src/ui/LoginDialog.cpp ../../src/ui/LoginDialog.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsDropShadowEffect \
-		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicseffect.h
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicseffect.h \
+		C:/Qt/6.11.1/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.11.1/mingw_64/include/QtCore/qtimer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/LoginDialog.o ../../src/ui/LoginDialog.cpp
 
 debug/RegisterDialog.o: ../../src/ui/RegisterDialog.cpp ../../src/ui/RegisterDialog.h \
@@ -7051,6 +7053,8 @@ debug/SportDietWidget.o: ../../src/ui/SportDietWidget.cpp ../../src/ui/SportDiet
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHeaderView \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qheaderview.h \
 		../../src/util/FileTool.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/SportDietWidget.o ../../src/ui/SportDietWidget.cpp
 

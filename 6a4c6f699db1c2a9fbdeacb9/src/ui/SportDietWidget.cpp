@@ -223,49 +223,61 @@ void SportDietWidget::addSportDialog()
 {
     QDialog dialog(this);
     dialog.setWindowTitle("新增运动记录");
-    dialog.setFixedSize(350, 380);
+    dialog.setMinimumWidth(420);
+    dialog.setMinimumHeight(450);
     dialog.setStyleSheet("QDialog { background-color: white; border-radius: 8px; }");
 
     QVBoxLayout* layout = new QVBoxLayout(&dialog);
-    layout->setContentsMargins(25, 25, 25, 25);
-    layout->setSpacing(15);
+    layout->setContentsMargins(30, 30, 30, 25);
+    layout->setSpacing(12);
 
     QLabel* titleLabel = new QLabel("🏃 新增运动记录", &dialog);
-    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; color: #303133;");
+    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; color: #303133; padding-bottom: 5px;");
     titleLabel->setAlignment(Qt::AlignCenter);
     layout->addWidget(titleLabel);
-    layout->addSpacing(5);
 
+    QLabel* typeLabel = new QLabel("运动类型:", &dialog);
+    typeLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(typeLabel);
     QComboBox* typeCombo = new QComboBox(&dialog);
+    typeCombo->setMinimumHeight(36);
     typeCombo->addItems({"跑步", "游泳", "瑜伽", "力量训练", "骑行", "跳绳", "步行", "篮球", "羽毛球"});
-    layout->addWidget(new QLabel("运动类型:"));
     layout->addWidget(typeCombo);
 
+    QLabel* durationLabel = new QLabel("运动时长(分钟):", &dialog);
+    durationLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(durationLabel);
     QLineEdit* durationEdit = new QLineEdit(&dialog);
-    durationEdit->setPlaceholderText("请输入运动时长");
-    layout->addWidget(new QLabel("运动时长(分钟):"));
+    durationEdit->setMinimumHeight(36);
+    durationEdit->setPlaceholderText("请输入运动时长，例如 30");
     layout->addWidget(durationEdit);
 
+    QLabel* distanceLabel = new QLabel("运动距离(km):", &dialog);
+    distanceLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(distanceLabel);
     QLineEdit* distanceEdit = new QLineEdit(&dialog);
+    distanceEdit->setMinimumHeight(36);
     distanceEdit->setPlaceholderText("请输入运动距离，无距离填0");
     distanceEdit->setText("0");
-    layout->addWidget(new QLabel("运动距离(km):"));
     layout->addWidget(distanceEdit);
 
+    QLabel* dateLabel = new QLabel("记录日期:", &dialog);
+    dateLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(dateLabel);
     QDateEdit* dateEdit = new QDateEdit(QDate::currentDate(), &dialog);
+    dateEdit->setMinimumHeight(36);
     dateEdit->setDisplayFormat("yyyy-MM-dd");
     dateEdit->setCalendarPopup(true);
-    layout->addWidget(new QLabel("记录日期:"));
     layout->addWidget(dateEdit);
 
-    layout->addStretch();
+    layout->addStretch(1);
 
     QHBoxLayout* btnLayout = new QHBoxLayout();
-    btnLayout->setSpacing(10);
+    btnLayout->setSpacing(12);
     QPushButton* okBtn = new QPushButton("确定", &dialog);
-    okBtn->setMinimumHeight(38);
+    okBtn->setMinimumHeight(40);
     QPushButton* cancelBtn = new QPushButton("取消", &dialog);
-    cancelBtn->setMinimumHeight(38);
+    cancelBtn->setMinimumHeight(40);
     cancelBtn->setStyleSheet("QPushButton { background-color: #f5f7fa; color: #606266; border: 1px solid #dcdfe6; border-radius: 6px; } QPushButton:hover { background-color: #ecf5ff; color: #409eff; border-color: #c6e2ff; }");
     btnLayout->addWidget(okBtn);
     btnLayout->addWidget(cancelBtn);
@@ -315,47 +327,59 @@ void SportDietWidget::editSportDialog()
 
     QDialog dialog(this);
     dialog.setWindowTitle("修改运动记录");
-    dialog.setFixedSize(350, 380);
+    dialog.setMinimumWidth(420);
+    dialog.setMinimumHeight(450);
     dialog.setStyleSheet("QDialog { background-color: white; border-radius: 8px; }");
 
     QVBoxLayout* layout = new QVBoxLayout(&dialog);
-    layout->setContentsMargins(25, 25, 25, 25);
-    layout->setSpacing(15);
+    layout->setContentsMargins(30, 30, 30, 25);
+    layout->setSpacing(12);
 
     QLabel* titleLabel = new QLabel("✏️ 修改运动记录", &dialog);
-    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; color: #303133;");
+    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; color: #303133; padding-bottom: 5px;");
     titleLabel->setAlignment(Qt::AlignCenter);
     layout->addWidget(titleLabel);
-    layout->addSpacing(5);
 
+    QLabel* typeLabel = new QLabel("运动类型:", &dialog);
+    typeLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(typeLabel);
     QComboBox* typeCombo = new QComboBox(&dialog);
+    typeCombo->setMinimumHeight(36);
     typeCombo->addItems({"跑步", "游泳", "瑜伽", "力量训练", "骑行", "跳绳", "步行", "篮球", "羽毛球"});
     typeCombo->setCurrentText(type);
-    layout->addWidget(new QLabel("运动类型:"));
     layout->addWidget(typeCombo);
 
+    QLabel* durationLabel = new QLabel("运动时长(分钟):", &dialog);
+    durationLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(durationLabel);
     QLineEdit* durationEdit = new QLineEdit(QString::number(duration), &dialog);
-    layout->addWidget(new QLabel("运动时长(分钟):"));
+    durationEdit->setMinimumHeight(36);
     layout->addWidget(durationEdit);
 
+    QLabel* distanceLabel = new QLabel("运动距离(km):", &dialog);
+    distanceLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(distanceLabel);
     QLineEdit* distanceEdit = new QLineEdit(QString::number(distance), &dialog);
-    layout->addWidget(new QLabel("运动距离(km):"));
+    distanceEdit->setMinimumHeight(36);
     layout->addWidget(distanceEdit);
 
+    QLabel* dateLabel = new QLabel("记录日期:", &dialog);
+    dateLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(dateLabel);
     QDateEdit* dateEdit = new QDateEdit(QDate::fromString(recordDate, "yyyy-MM-dd"), &dialog);
+    dateEdit->setMinimumHeight(36);
     dateEdit->setDisplayFormat("yyyy-MM-dd");
     dateEdit->setCalendarPopup(true);
-    layout->addWidget(new QLabel("记录日期:"));
     layout->addWidget(dateEdit);
 
-    layout->addStretch();
+    layout->addStretch(1);
 
     QHBoxLayout* btnLayout = new QHBoxLayout();
-    btnLayout->setSpacing(10);
+    btnLayout->setSpacing(12);
     QPushButton* okBtn = new QPushButton("确定", &dialog);
-    okBtn->setMinimumHeight(38);
+    okBtn->setMinimumHeight(40);
     QPushButton* cancelBtn = new QPushButton("取消", &dialog);
-    cancelBtn->setMinimumHeight(38);
+    cancelBtn->setMinimumHeight(40);
     cancelBtn->setStyleSheet("QPushButton { background-color: #f5f7fa; color: #606266; border: 1px solid #dcdfe6; border-radius: 6px; } QPushButton:hover { background-color: #ecf5ff; color: #409eff; border-color: #c6e2ff; }");
     btnLayout->addWidget(okBtn);
     btnLayout->addWidget(cancelBtn);
@@ -450,17 +474,12 @@ void SportDietWidget::drawSportLineChart()
     getSportDateRange(startDate, endDate);
     QList<SportRecord> records = sportService.querySportByDateRange(currentUserId, startDate, endDate);
 
-    // 先删除旧chart避免内存泄漏
-    QChart* oldChart = sportChartView->chart();
-    if (oldChart) {
-        delete oldChart;
-    }
-
     QChart* chart = new QChart();
     chart->setTitle("运动趋势");
-    chart->setAnimationOptions(QChart::SeriesAnimations);
+    chart->setAnimationOptions(QChart::NoAnimation); // 关闭动画避免切换时崩溃
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignBottom);
+    chart->setMargins(QMargins(10, 10, 10, 10));
 
     QLineSeries* durationSeries = new QLineSeries();
     durationSeries->setName("时长(分钟)");
@@ -488,41 +507,48 @@ void SportDietWidget::drawSportLineChart()
         calSeries->append(i, dateData[dates[i]].second);
     }
 
-    chart->addSeries(durationSeries);
-    chart->addSeries(calSeries);
+    // 只有有数据时才添加轴
+    if (!dates.isEmpty()) {
+        chart->addSeries(durationSeries);
+        chart->addSeries(calSeries);
 
-    // 创建X轴 - 简化日期显示避免重叠
-    QCategoryAxis* axisX = new QCategoryAxis();
-    axisX->setLabelsPosition(QCategoryAxis::AxisLabelsPositionOnValue);
-    for (int i = 0; i < dates.size(); i++) {
-        QString shortDate = dates[i].mid(5);
-        axisX->append(shortDate, i);
-    }
-    axisX->setRange(-0.5, qMax(dates.size() - 0.5, 0.5));
-    chart->addAxis(axisX, Qt::AlignBottom);
-    durationSeries->attachAxis(axisX);
-    calSeries->attachAxis(axisX);
+        // 创建X轴
+        QCategoryAxis* axisX = new QCategoryAxis();
+        axisX->setLabelsPosition(QCategoryAxis::AxisLabelsPositionOnValue);
+        for (int i = 0; i < dates.size(); i++) {
+            QString shortDate = dates[i].mid(5);
+            axisX->append(shortDate, i);
+        }
+        axisX->setRange(-0.5, dates.size() - 0.5);
+        chart->addAxis(axisX, Qt::AlignBottom);
+        durationSeries->attachAxis(axisX);
+        calSeries->attachAxis(axisX);
 
-    // 设置双Y轴
-    QValueAxis* axisYDuration = new QValueAxis();
-    axisYDuration->setTitleText("时长(分钟)");
-    axisYDuration->setLabelFormat("%.0f");
-    axisYDuration->setMin(0);
-    chart->addAxis(axisYDuration, Qt::AlignLeft);
-    durationSeries->attachAxis(axisYDuration);
+        // 设置双Y轴
+        QValueAxis* axisYDuration = new QValueAxis();
+        axisYDuration->setTitleText("时长(分钟)");
+        axisYDuration->setLabelFormat("%.0f");
+        axisYDuration->setMin(0);
+        chart->addAxis(axisYDuration, Qt::AlignLeft);
+        durationSeries->attachAxis(axisYDuration);
 
-    QValueAxis* axisYCal = new QValueAxis();
-    axisYCal->setTitleText("卡路里");
-    axisYCal->setLabelFormat("%.0f");
-    axisYCal->setMin(0);
-    chart->addAxis(axisYCal, Qt::AlignRight);
-    calSeries->attachAxis(axisYCal);
-
-    if (dates.isEmpty()) {
+        QValueAxis* axisYCal = new QValueAxis();
+        axisYCal->setTitleText("卡路里");
+        axisYCal->setLabelFormat("%.0f");
+        axisYCal->setMin(0);
+        chart->addAxis(axisYCal, Qt::AlignRight);
+        calSeries->attachAxis(axisYCal);
+    } else {
         chart->setTitle("运动趋势 (暂无数据)");
     }
 
+    // 替换旧chart，由QChartView管理内存
+    QChart* oldChart = sportChartView->chart();
     sportChartView->setChart(chart);
+    if (oldChart) {
+        oldChart->deleteLater(); // 延迟删除更安全
+    }
+
     sportChartView->setRenderHint(QPainter::Antialiasing);
 }
 
@@ -530,48 +556,60 @@ void SportDietWidget::addDietDialog()
 {
     QDialog dialog(this);
     dialog.setWindowTitle("新增饮食记录");
-    dialog.setFixedSize(350, 420);
+    dialog.setMinimumWidth(420);
+    dialog.setMinimumHeight(500);
     dialog.setStyleSheet("QDialog { background-color: white; border-radius: 8px; }");
 
     QVBoxLayout* layout = new QVBoxLayout(&dialog);
-    layout->setContentsMargins(25, 25, 25, 25);
-    layout->setSpacing(15);
+    layout->setContentsMargins(30, 30, 30, 25);
+    layout->setSpacing(12);
 
     QLabel* titleLabel = new QLabel("🍎 新增饮食记录", &dialog);
-    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; color: #303133;");
+    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; color: #303133; padding-bottom: 5px;");
     titleLabel->setAlignment(Qt::AlignCenter);
     layout->addWidget(titleLabel);
-    layout->addSpacing(5);
 
+    QLabel* mealLabel = new QLabel("餐次:", &dialog);
+    mealLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(mealLabel);
     QComboBox* mealCombo = new QComboBox(&dialog);
+    mealCombo->setMinimumHeight(36);
     mealCombo->addItems({"早餐", "午餐", "晚餐", "加餐"});
-    layout->addWidget(new QLabel("餐次:"));
     layout->addWidget(mealCombo);
 
+    QLabel* foodLabel = new QLabel("食物名称:", &dialog);
+    foodLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(foodLabel);
     QLineEdit* foodEdit = new QLineEdit(&dialog);
-    foodEdit->setPlaceholderText("请输入食物名称");
-    layout->addWidget(new QLabel("食物名称:"));
+    foodEdit->setMinimumHeight(36);
+    foodEdit->setPlaceholderText("请输入食物名称，例如 米饭");
     layout->addWidget(foodEdit);
 
+    QLabel* weightLabel = new QLabel("食用重量(g):", &dialog);
+    weightLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(weightLabel);
     QLineEdit* weightEdit = new QLineEdit(&dialog);
-    weightEdit->setPlaceholderText("请输入食用重量");
-    layout->addWidget(new QLabel("食用重量(g):"));
+    weightEdit->setMinimumHeight(36);
+    weightEdit->setPlaceholderText("请输入食用重量，例如 100");
     layout->addWidget(weightEdit);
 
+    QLabel* timeLabel = new QLabel("记录时间:", &dialog);
+    timeLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(timeLabel);
     QDateTimeEdit* timeEdit = new QDateTimeEdit(QDateTime::currentDateTime(), &dialog);
+    timeEdit->setMinimumHeight(36);
     timeEdit->setDisplayFormat("yyyy-MM-dd HH:mm");
     timeEdit->setCalendarPopup(true);
-    layout->addWidget(new QLabel("记录时间:"));
     layout->addWidget(timeEdit);
 
-    layout->addStretch();
+    layout->addStretch(1);
 
     QHBoxLayout* btnLayout = new QHBoxLayout();
-    btnLayout->setSpacing(10);
+    btnLayout->setSpacing(12);
     QPushButton* okBtn = new QPushButton("确定", &dialog);
-    okBtn->setMinimumHeight(38);
+    okBtn->setMinimumHeight(40);
     QPushButton* cancelBtn = new QPushButton("取消", &dialog);
-    cancelBtn->setMinimumHeight(38);
+    cancelBtn->setMinimumHeight(40);
     cancelBtn->setStyleSheet("QPushButton { background-color: #f5f7fa; color: #606266; border: 1px solid #dcdfe6; border-radius: 6px; } QPushButton:hover { background-color: #ecf5ff; color: #409eff; border-color: #c6e2ff; }");
     btnLayout->addWidget(okBtn);
     btnLayout->addWidget(cancelBtn);
@@ -633,47 +671,59 @@ void SportDietWidget::editDietDialog()
 
     QDialog dialog(this);
     dialog.setWindowTitle("修改饮食记录");
-    dialog.setFixedSize(350, 420);
+    dialog.setMinimumWidth(420);
+    dialog.setMinimumHeight(500);
     dialog.setStyleSheet("QDialog { background-color: white; border-radius: 8px; }");
 
     QVBoxLayout* layout = new QVBoxLayout(&dialog);
-    layout->setContentsMargins(25, 25, 25, 25);
-    layout->setSpacing(15);
+    layout->setContentsMargins(30, 30, 30, 25);
+    layout->setSpacing(12);
 
     QLabel* titleLabel = new QLabel("✏️ 修改饮食记录", &dialog);
-    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; color: #303133;");
+    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; color: #303133; padding-bottom: 5px;");
     titleLabel->setAlignment(Qt::AlignCenter);
     layout->addWidget(titleLabel);
-    layout->addSpacing(5);
 
+    QLabel* mealLabel = new QLabel("餐次:", &dialog);
+    mealLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(mealLabel);
     QComboBox* mealCombo = new QComboBox(&dialog);
+    mealCombo->setMinimumHeight(36);
     mealCombo->addItems({"早餐", "午餐", "晚餐", "加餐"});
     mealCombo->setCurrentIndex(mealType - 1);
-    layout->addWidget(new QLabel("餐次:"));
     layout->addWidget(mealCombo);
 
+    QLabel* foodLabel = new QLabel("食物名称:", &dialog);
+    foodLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(foodLabel);
     QLineEdit* foodEdit = new QLineEdit(food, &dialog);
-    layout->addWidget(new QLabel("食物名称:"));
+    foodEdit->setMinimumHeight(36);
     layout->addWidget(foodEdit);
 
+    QLabel* weightLabel = new QLabel("食用重量(g):", &dialog);
+    weightLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(weightLabel);
     QLineEdit* weightEdit = new QLineEdit(QString::number(weight), &dialog);
-    layout->addWidget(new QLabel("食用重量(g):"));
+    weightEdit->setMinimumHeight(36);
     layout->addWidget(weightEdit);
 
+    QLabel* timeLabel = new QLabel("记录时间:", &dialog);
+    timeLabel->setStyleSheet("color: #606266; font-weight: 500;");
+    layout->addWidget(timeLabel);
     QDateTimeEdit* timeEdit = new QDateTimeEdit(QDateTime::fromString(recordTime, "yyyy-MM-dd HH:mm:ss"), &dialog);
+    timeEdit->setMinimumHeight(36);
     timeEdit->setDisplayFormat("yyyy-MM-dd HH:mm");
     timeEdit->setCalendarPopup(true);
-    layout->addWidget(new QLabel("记录时间:"));
     layout->addWidget(timeEdit);
 
-    layout->addStretch();
+    layout->addStretch(1);
 
     QHBoxLayout* btnLayout = new QHBoxLayout();
-    btnLayout->setSpacing(10);
+    btnLayout->setSpacing(12);
     QPushButton* okBtn = new QPushButton("确定", &dialog);
-    okBtn->setMinimumHeight(38);
+    okBtn->setMinimumHeight(40);
     QPushButton* cancelBtn = new QPushButton("取消", &dialog);
-    cancelBtn->setMinimumHeight(38);
+    cancelBtn->setMinimumHeight(40);
     cancelBtn->setStyleSheet("QPushButton { background-color: #f5f7fa; color: #606266; border: 1px solid #dcdfe6; border-radius: 6px; } QPushButton:hover { background-color: #ecf5ff; color: #409eff; border-color: #c6e2ff; }");
     btnLayout->addWidget(okBtn);
     btnLayout->addWidget(cancelBtn);

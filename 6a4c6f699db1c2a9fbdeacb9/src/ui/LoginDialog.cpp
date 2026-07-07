@@ -2,6 +2,7 @@
 #include "RegisterDialog.h"
 #include <QMessageBox>
 #include <QGraphicsDropShadowEffect>
+#include <QTimer>
 
 LoginDialog::LoginDialog(QWidget* parent)
     : QDialog(parent)
@@ -137,7 +138,8 @@ void LoginDialog::onLoginClick()
         QMessageBox::warning(this, "错误", "账号已被冻结");
     } else {
         emit loginSuccess(user);
-        accept();
+        // 延迟关闭，确保信号处理完成
+        QTimer::singleShot(100, this, &QDialog::accept);
     }
 }
 
