@@ -2,7 +2,6 @@
 #include "RegisterDialog.h"
 #include <QMessageBox>
 #include <QGraphicsDropShadowEffect>
-#include <QTimer>
 
 LoginDialog::LoginDialog(QWidget* parent)
     : QDialog(parent)
@@ -137,9 +136,8 @@ void LoginDialog::onLoginClick()
     } else if (user.userId == -1) {
         QMessageBox::warning(this, "错误", "账号已被冻结");
     } else {
+        // 发送登录成功信号，main.cpp中会处理主窗口创建和对话框关闭
         emit loginSuccess(user);
-        // 延迟关闭，确保信号处理完成
-        QTimer::singleShot(100, this, &QDialog::accept);
     }
 }
 
