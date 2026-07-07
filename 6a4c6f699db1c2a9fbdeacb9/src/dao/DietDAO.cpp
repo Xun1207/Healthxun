@@ -19,14 +19,27 @@ bool DietDAO::addDietRecord(const DietRecord& record)
 bool DietDAO::updateDietRecord(const DietRecord& record)
 {
     SqliteHelper* dbHelper = SqliteHelper::getInstance();
-    // 修改时不更新record_time和food_id，保持原记录时间和关联食物不变
-    QString sql = QString("UPDATE diet_record SET food_name='%1', weight=%2, calorie=%3, "
-                          "meal_type=%4 WHERE diet_id=%5")
-                      .arg(record.foodName)
-                      .arg(record.weight)
-                      .arg(record.calorie)
-                      .arg(record.mealType)
-                      .arg(record.dietId);
+    QString sql;
+    if (record.recordTime.isEmpty()) {
+        // 不更新时间
+        sql = QString("UPDATE diet_record SET food_name='%1', weight=%2, calorie=%3, "
+                              "meal_type=%4 WHERE diet_id=%5")
+                          .arg(record.foodName)
+                          .arg(record.weight)
+                          .arg(record.calorie)
+                          .arg(record.mealType)
+                          .arg(record.dietId);
+    } else {
+        // 更新时间
+        sql = QString("UPDATE diet_record SET food_name='%1', weight=%2, calorie=%3, "
+                              "meal_type=%4, record_time='%5' WHERE diet_id=%6")
+                          .arg(record.foodName)
+                          .arg(record.weight)
+                          .arg(record.calorie)
+                          .arg(record.mealType)
+                          .arg(record.recordTime)
+                          .arg(record.dietId);
+    }
     return dbHelper->execSqlNoQuery(sql);
 }
 
@@ -69,6 +82,21 @@ int DietDAO::calcDayTotalIntake(int userId, const QString& date)
     QString sql = QString("SELECT SUM(calorie) FROM diet_record WHERE user_id=%1 AND record_time >= '%2 00:00:00' AND record_time <= '%2 23:59:59'")
                       .arg(userId)
                       .arg(date);
+    QSqlQuery query = dbHelper->execSql(sql);
+
+    if (query.next()) {
+        return query.value(0).toInt();
+    }
+    return 0;
+}
+
+int DietDAO::calcDateRangeTotalIntake(int userId, const QString& startDate, const QString& endDate)
+{
+    SqliteHelper* dbHelper = SqliteHelper::getInstance();
+    QString sql = QString("SELECT SUM(calorie) FROM diet_record WHERE user_id=%1 AND record_time >= '%2 00:00:00' AND record_time <= '%3 23:59:59'")
+                      .arg(userId)
+                      .arg(startDate)
+                      .arg(endDate);
     QSqlQuery query = dbHelper->execSql(sql);
 
     if (query.next()) {

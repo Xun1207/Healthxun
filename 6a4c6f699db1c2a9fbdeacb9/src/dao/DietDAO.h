@@ -12,6 +12,7 @@ public:
     bool deleteDietRecord(int dietId);
     QList<DietRecord> queryByUserAndDate(int userId, const QString& startDate, const QString& endDate);
     int calcDayTotalIntake(int userId, const QString& date);
+    int calcDateRangeTotalIntake(int userId, const QString& startDate, const QString& endDate);
 };
 
 #endif

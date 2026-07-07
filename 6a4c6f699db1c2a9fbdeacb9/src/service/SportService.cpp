@@ -4,7 +4,7 @@ SportService::SportService()
 {
 }
 
-bool SportService::addSport(int userId, const QString& sportType, float duration, float distance)
+bool SportService::addSport(int userId, const QString& sportType, float duration, float distance, const QString& recordDate)
 {
     int calorie = CalUtil::calcSportBurn(sportType, duration);
 
@@ -14,12 +14,12 @@ bool SportService::addSport(int userId, const QString& sportType, float duration
     record.duration = duration;
     record.distance = distance;
     record.calorieBurn = calorie;
-    record.recordDate = QDateTime::currentDateTime().toString("yyyy-MM-dd");
+    record.recordDate = recordDate.isEmpty() ? QDateTime::currentDateTime().toString("yyyy-MM-dd") : recordDate;
 
     return dao.addSportRecord(record);
 }
 
-bool SportService::updateSport(int recordId, const QString& sportType, float duration, float distance)
+bool SportService::updateSport(int recordId, const QString& sportType, float duration, float distance, const QString& recordDate)
 {
     int calorie = CalUtil::calcSportBurn(sportType, duration);
 
@@ -29,6 +29,9 @@ bool SportService::updateSport(int recordId, const QString& sportType, float dur
     record.duration = duration;
     record.distance = distance;
     record.calorieBurn = calorie;
+    if (!recordDate.isEmpty()) {
+        record.recordDate = recordDate;
+    }
 
     return dao.updateSportRecord(record);
 }
@@ -58,6 +61,11 @@ QList<SportRecord> SportService::querySportByCycle(int userId, int cycleType)
     return dao.queryByUserAndDate(userId, startDate, endDate);
 }
 
+QList<SportRecord> SportService::querySportByDateRange(int userId, const QString& startDate, const QString& endDate)
+{
+    return dao.queryByUserAndDate(userId, startDate, endDate);
+}
+
 int SportService::calcCycleSportTotal(int userId, int cycleType)
 {
     QDate today = QDate::currentDate();
@@ -75,5 +83,10 @@ int SportService::calcCycleSportTotal(int userId, int cycleType)
         endDate = today.toString("yyyy-MM-dd");
     }
 
+    return dao.calcTotalCalorie(userId, startDate, endDate);
+}
+
+int SportService::calcDateRangeSportTotal(int userId, const QString& startDate, const QString& endDate)
+{
     return dao.calcTotalCalorie(userId, startDate, endDate);
 }

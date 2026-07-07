@@ -152,25 +152,26 @@ MainWindow::MainWindow(const User& user, QWidget* parent)
 
     sidebarLayout->addStretch();
 
-    // 退出登录按钮
-    QPushButton* logoutBtn = new QPushButton("🚪  退出登录", sidebar);
-    logoutBtn->setMinimumHeight(48);
-    logoutBtn->setCursor(Qt::PointingHandCursor);
-    logoutBtn->setStyleSheet(R"(
+    // 意见反馈按钮
+    QPushButton* feedbackBtn = new QPushButton("💬  意见反馈", sidebar);
+    feedbackBtn->setMinimumHeight(48);
+    feedbackBtn->setCursor(Qt::PointingHandCursor);
+    feedbackBtn->setStyleSheet(R"(
         QPushButton {
             text-align: left;
             padding-left: 24px;
             border: none;
-            color: #f56c6c;
+            color: #bfcbd9;
             font-size: 14px;
             background-color: transparent;
             border-top: 1px solid #263445;
         }
         QPushButton:hover {
             background-color: #263445;
+            color: white;
         }
     )");
-    sidebarLayout->addWidget(logoutBtn);
+    sidebarLayout->addWidget(feedbackBtn);
 
     // 关于按钮
     QPushButton* aboutBtn = new QPushButton("ℹ️  关于系统", sidebar);
@@ -192,6 +193,25 @@ MainWindow::MainWindow(const User& user, QWidget* parent)
     )");
     sidebarLayout->addWidget(aboutBtn);
 
+    // 退出登录按钮
+    QPushButton* logoutBtn = new QPushButton("🚪  退出登录", sidebar);
+    logoutBtn->setMinimumHeight(48);
+    logoutBtn->setCursor(Qt::PointingHandCursor);
+    logoutBtn->setStyleSheet(R"(
+        QPushButton {
+            text-align: left;
+            padding-left: 24px;
+            border: none;
+            color: #f56c6c;
+            font-size: 14px;
+            background-color: transparent;
+        }
+        QPushButton:hover {
+            background-color: #263445;
+        }
+    )");
+    sidebarLayout->addWidget(logoutBtn);
+
     mainLayout->addWidget(sidebar);
     mainLayout->addWidget(stackedWidget, 1);
 
@@ -204,7 +224,24 @@ MainWindow::MainWindow(const User& user, QWidget* parent)
 
     connect(logoutBtn, &QPushButton::clicked, this, &MainWindow::onLogout);
 
-    // 意见反馈
+    // 意见反馈功能
+    connect(feedbackBtn, &QPushButton::clicked, this, [this]() {
+        bool ok;
+        QString content = QInputDialog::getMultiLineText(
+            this, "提交意见反馈",
+            "请输入您的反馈意见（bug报告、功能建议等）：",
+            "", &ok);
+        if (ok && !content.trimmed().isEmpty()) {
+            SystemService systemService;
+            if (systemService.addFeedback(currentUser.userId, content.trimmed())) {
+                QMessageBox::information(this, "提交成功", "感谢您的反馈！我们会认真处理。");
+            } else {
+                QMessageBox::warning(this, "提交失败", "提交反馈失败，请稍后重试。");
+            }
+        }
+    });
+
+    // 关于对话框
     connect(aboutBtn, &QPushButton::clicked, this, [this]() {
         QMessageBox::about(this, "关于健康管理系统",
             "🏥 健康管理系统 v1.0\n\n"
@@ -214,7 +251,8 @@ MainWindow::MainWindow(const User& user, QWidget* parent)
             "  • 运动记录与热量统计\n"
             "  • 饮食记录与营养分析\n"
             "  • 定时健康提醒\n"
-            "  • 月度健康报表\n\n"
+            "  • 月度健康报表\n"
+            "  • 用户意见反馈\n\n"
             "© 2026");
     });
 

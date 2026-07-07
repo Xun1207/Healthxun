@@ -44,13 +44,16 @@ template <> constexpr inline auto SportDietWidget::qt_create_metaobjectdata<qt_m
         "",
         "editSportDialog",
         "delSportRecord",
-        "querySportByCycle",
+        "querySport",
         "drawSportLineChart",
         "addDietDialog",
         "editDietDialog",
         "delDietRecord",
-        "queryDietByDate",
-        "exportDietTxt"
+        "queryDiet",
+        "exportDietTxt",
+        "onSportDateModeChanged",
+        "mode",
+        "onDietDateModeChanged"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -60,7 +63,7 @@ template <> constexpr inline auto SportDietWidget::qt_create_metaobjectdata<qt_m
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'delSportRecord'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'querySportByCycle'
+        // Slot 'querySport'
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'drawSportLineChart'
         QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
@@ -70,10 +73,18 @@ template <> constexpr inline auto SportDietWidget::qt_create_metaobjectdata<qt_m
         QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'delDietRecord'
         QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'queryDietByDate'
+        // Slot 'queryDiet'
         QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'exportDietTxt'
         QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onSportDateModeChanged'
+        QtMocHelpers::SlotData<void(int)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 13 },
+        }}),
+        // Slot 'onDietDateModeChanged'
+        QtMocHelpers::SlotData<void(int)>(14, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 13 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -100,17 +111,18 @@ void SportDietWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 0: _t->addSportDialog(); break;
         case 1: _t->editSportDialog(); break;
         case 2: _t->delSportRecord(); break;
-        case 3: _t->querySportByCycle(); break;
+        case 3: _t->querySport(); break;
         case 4: _t->drawSportLineChart(); break;
         case 5: _t->addDietDialog(); break;
         case 6: _t->editDietDialog(); break;
         case 7: _t->delDietRecord(); break;
-        case 8: _t->queryDietByDate(); break;
+        case 8: _t->queryDiet(); break;
         case 9: _t->exportDietTxt(); break;
+        case 10: _t->onSportDateModeChanged((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 11: _t->onDietDateModeChanged((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *SportDietWidget::metaObject() const
@@ -132,14 +144,14 @@ int SportDietWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 12;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 10;
+        _id -= 12;
     }
     return _id;
 }
