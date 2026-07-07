@@ -1,6 +1,7 @@
 #include "SystemService.h"
 #include "../db/SqliteHelper.h"
 #include <QSqlQuery>
+#include <QDateTime>
 
 SystemService::SystemService()
 {
@@ -55,4 +56,20 @@ QList<QMap<QString, QString>> SystemService::getAllFeedback()
     }
 
     return feedbackList;
+}
+
+bool SystemService::addFeedback(int userId, const QString& content)
+{
+    if (content.trimmed().isEmpty()) {
+        return false;
+    }
+    SqliteHelper* dbHelper = SqliteHelper::getInstance();
+    QString createTime = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");
+    QString escapedContent = content;
+    escapedContent.replace("'", "''"); // 简单转义单引号
+    QString sql = QString("INSERT INTO feedback(user_id, content, create_time) VALUES (%1, '%2', '%3')")
+                      .arg(userId)
+                      .arg(escapedContent)
+                      .arg(createTime);
+    return dbHelper->execSqlNoQuery(sql);
 }

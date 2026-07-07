@@ -19,14 +19,13 @@ bool DietDAO::addDietRecord(const DietRecord& record)
 bool DietDAO::updateDietRecord(const DietRecord& record)
 {
     SqliteHelper* dbHelper = SqliteHelper::getInstance();
+    // 修改时不更新record_time和food_id，保持原记录时间和关联食物不变
     QString sql = QString("UPDATE diet_record SET food_name='%1', weight=%2, calorie=%3, "
-                          "meal_type=%4, record_time='%5', food_id=%6 WHERE diet_id=%7")
+                          "meal_type=%4 WHERE diet_id=%5")
                       .arg(record.foodName)
                       .arg(record.weight)
                       .arg(record.calorie)
                       .arg(record.mealType)
-                      .arg(record.recordTime)
-                      .arg(record.foodId)
                       .arg(record.dietId);
     return dbHelper->execSqlNoQuery(sql);
 }

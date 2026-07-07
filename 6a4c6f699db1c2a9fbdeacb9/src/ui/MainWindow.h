@@ -27,11 +27,11 @@ private slots:
 private:
     User currentUser;
     QStackedWidget* stackedWidget;
-    InfoWidget* infoWidget;
-    SportDietWidget* sportDietWidget;
-    RemindWidget* remindWidget;
-    ReportWidget* reportWidget;
-    AdminWidget* adminWidget;
+    InfoWidget* infoWidget = nullptr;
+    SportDietWidget* sportDietWidget = nullptr;
+    RemindWidget* remindWidget = nullptr;
+    ReportWidget* reportWidget = nullptr;
+    AdminWidget* adminWidget = nullptr;
 };
 
 #endif

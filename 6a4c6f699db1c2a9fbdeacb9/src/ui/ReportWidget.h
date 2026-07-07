@@ -8,6 +8,7 @@
 #include <QPushButton>
 #include <QDateEdit>
 #include <QTextEdit>
+#include <QGroupBox>
 #include "../service/ReportService.h"
 #include "../util/FileTool.h"
 

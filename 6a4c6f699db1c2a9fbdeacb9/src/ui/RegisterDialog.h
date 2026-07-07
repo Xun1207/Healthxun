@@ -16,6 +16,8 @@ public:
     RegisterDialog(QWidget* parent = nullptr);
     ~RegisterDialog();
 
+    QString getRegisteredUsername() const { return registeredUsername; }
+
 private slots:
     void submitReg();
 
@@ -26,6 +28,7 @@ private:
     QPushButton* submitBtn;
     QPushButton* cancelBtn;
     UserService userService;
+    QString registeredUsername;
 };
 
 #endif

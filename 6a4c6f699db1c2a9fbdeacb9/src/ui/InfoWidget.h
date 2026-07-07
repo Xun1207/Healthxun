@@ -8,6 +8,8 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QRadioButton>
+#include <QFormLayout>
+#include <QGroupBox>
 #include "../entity/User.h"
 #include "../service/UserService.h"
 
@@ -22,6 +24,7 @@ private slots:
     void saveModifiedInfo();
 
 private:
+    void updateBMIDisplay(float bmi);
     User currentUser;
     UserService userService;
 

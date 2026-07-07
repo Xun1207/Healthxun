@@ -5,37 +5,48 @@ RemindWidget::RemindWidget(int userId, QWidget* parent)
     : QWidget(parent), currentUserId(userId)
 {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    mainLayout->setContentsMargins(30, 30, 30, 30);
+    mainLayout->setSpacing(18);
 
-    QLabel* titleLabel = new QLabel("健康提醒设置", this);
-    titleLabel->setStyleSheet("font-size: 20px; font-weight: bold;");
+    QLabel* titleLabel = new QLabel("⏰ 健康提醒设置", this);
+    titleLabel->setObjectName("titleLabel");
     mainLayout->addWidget(titleLabel);
-    mainLayout->addSpacing(20);
 
-    QHBoxLayout* typeLayout = new QHBoxLayout();
-    QLabel* typeLabel = new QLabel("提醒类型:", this);
+    QGroupBox* remindGroup = new QGroupBox("提醒配置", this);
+    QFormLayout* formLayout = new QFormLayout(remindGroup);
+    formLayout->setSpacing(20);
+    formLayout->setLabelAlignment(Qt::AlignRight | Qt::AlignVCenter);
+
     typeCombo = new QComboBox(this);
     typeCombo->addItems({"运动打卡", "三餐记录", "年度体检"});
-    typeLayout->addWidget(typeLabel);
-    typeLayout->addWidget(typeCombo);
-    mainLayout->addLayout(typeLayout);
+    formLayout->addRow("提醒类型:", typeCombo);
 
-    QHBoxLayout* timeLayout = new QHBoxLayout();
-    QLabel* timeLabel = new QLabel("提醒时间:", this);
     timeEdit = new QTimeEdit(QTime(8, 0), this);
-    timeLayout->addWidget(timeLabel);
-    timeLayout->addWidget(timeEdit);
-    mainLayout->addLayout(timeLayout);
+    timeEdit->setDisplayFormat("HH:mm");
+    formLayout->addRow("提醒时间:", timeEdit);
 
-    QHBoxLayout* enableLayout = new QHBoxLayout();
-    enableCheck = new QCheckBox("启用提醒", this);
+    enableCheck = new QCheckBox("启用该提醒", this);
     enableCheck->setChecked(true);
-    enableLayout->addWidget(enableCheck);
-    mainLayout->addLayout(enableLayout);
+    enableCheck->setStyleSheet("font-size: 14px;");
+    formLayout->addRow("", enableCheck);
 
-    mainLayout->addSpacing(20);
+    mainLayout->addWidget(remindGroup);
 
-    saveBtn = new QPushButton("保存设置", this);
-    mainLayout->addWidget(saveBtn);
+    QLabel* tipLabel = new QLabel("💡 提示：程序运行时，到达提醒时间会自动弹出消息提示。", this);
+    tipLabel->setStyleSheet("color: #909399; padding: 10px; background-color: #f4f4f5; border-radius: 6px;");
+    tipLabel->setWordWrap(true);
+    mainLayout->addWidget(tipLabel);
+
+    mainLayout->addStretch();
+
+    saveBtn = new QPushButton("💾 保存设置", this);
+    saveBtn->setMinimumHeight(40);
+    saveBtn->setObjectName("successBtn");
+    QHBoxLayout* btnLayout = new QHBoxLayout();
+    btnLayout->addStretch();
+    btnLayout->addWidget(saveBtn);
+    btnLayout->addStretch();
+    mainLayout->addLayout(btnLayout);
 
     connect(saveBtn, &QPushButton::clicked, this, &RemindWidget::saveRemindConfig);
 }

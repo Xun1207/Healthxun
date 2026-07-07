@@ -19,6 +19,7 @@ public:
     bool backupAllDatabase(const QString& savePath);
     bool restoreDBFromFile(const QString& filePath);
     QList<QMap<QString, QString>> getAllFeedback();
+    bool addFeedback(int userId, const QString& content);
 
 private:
     FoodStdDAO dao;

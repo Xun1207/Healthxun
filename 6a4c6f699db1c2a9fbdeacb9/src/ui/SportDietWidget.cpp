@@ -22,9 +22,12 @@ SportDietWidget::SportDietWidget(int userId, QWidget* parent)
     sportCycleCombo->addItem("本月", 3);
     sportQueryBtn = new QPushButton("查询", this);
     sportAddBtn = new QPushButton("新增", this);
+    sportAddBtn->setObjectName("successBtn");
     sportEditBtn = new QPushButton("修改", this);
     sportDelBtn = new QPushButton("删除", this);
+    sportDelBtn->setObjectName("delBtn");
     sportTopLayout->addWidget(sportCycleCombo);
+    sportTopLayout->addStretch();
     sportTopLayout->addWidget(sportQueryBtn);
     sportTopLayout->addWidget(sportAddBtn);
     sportTopLayout->addWidget(sportEditBtn);
@@ -32,6 +35,7 @@ SportDietWidget::SportDietWidget(int userId, QWidget* parent)
     sportLayout->addLayout(sportTopLayout);
 
     sportStatLabel = new QLabel(this);
+    sportStatLabel->setObjectName("statLabel");
     sportLayout->addWidget(sportStatLabel);
 
     sportTable = new QTableWidget(this);
@@ -53,11 +57,17 @@ SportDietWidget::SportDietWidget(int userId, QWidget* parent)
     dietEndDate = new QDateEdit(QDate::currentDate(), this);
     dietQueryBtn = new QPushButton("查询", this);
     dietAddBtn = new QPushButton("新增", this);
+    dietAddBtn->setObjectName("successBtn");
     dietEditBtn = new QPushButton("修改", this);
     dietDelBtn = new QPushButton("删除", this);
+    dietDelBtn->setObjectName("delBtn");
     dietExportBtn = new QPushButton("导出", this);
+    dietExportBtn->setObjectName("warningBtn");
+    dietTopLayout->addWidget(new QLabel("开始日期:"));
     dietTopLayout->addWidget(dietStartDate);
+    dietTopLayout->addWidget(new QLabel("结束日期:"));
     dietTopLayout->addWidget(dietEndDate);
+    dietTopLayout->addStretch();
     dietTopLayout->addWidget(dietQueryBtn);
     dietTopLayout->addWidget(dietAddBtn);
     dietTopLayout->addWidget(dietEditBtn);
@@ -66,6 +76,7 @@ SportDietWidget::SportDietWidget(int userId, QWidget* parent)
     dietLayout->addLayout(dietTopLayout);
 
     dietStatLabel = new QLabel(this);
+    dietStatLabel->setObjectName("statLabel");
     dietLayout->addWidget(dietStatLabel);
 
     dietTable = new QTableWidget(this);
@@ -270,14 +281,23 @@ void SportDietWidget::drawSportLineChart()
     int cycleType = sportCycleCombo->currentData().toInt();
     QList<SportRecord> records = sportService.querySportByCycle(currentUserId, cycleType);
 
+    // 先删除旧chart避免内存泄漏
+    QChart* oldChart = sportChartView->chart();
+    if (oldChart) {
+        delete oldChart;
+    }
+
     QChart* chart = new QChart();
     chart->setTitle("运动趋势");
+    chart->setAnimationOptions(QChart::SeriesAnimations);
 
     QLineSeries* durationSeries = new QLineSeries();
     durationSeries->setName("时长(分钟)");
+    durationSeries->setPointsVisible(true);
 
     QLineSeries* calSeries = new QLineSeries();
-    calSeries->setName("卡路里");
+    calSeries->setName("消耗卡路里");
+    calSeries->setPointsVisible(true);
 
     QMap<QString, QPair<float, int>> dateData;
     for (const SportRecord& record : records) {
@@ -300,23 +320,43 @@ void SportDietWidget::drawSportLineChart()
     chart->addSeries(durationSeries);
     chart->addSeries(calSeries);
 
+    // 创建X轴 - 简化日期显示避免重叠
     QCategoryAxis* axisX = new QCategoryAxis();
+    axisX->setLabelsPosition(QCategoryAxis::AxisLabelsPositionOnValue);
     for (int i = 0; i < dates.size(); i++) {
-        axisX->append(dates[i], i);
+        // 只显示MM-dd格式，减少标签长度
+        QString shortDate = dates[i].mid(5);
+        axisX->append(shortDate, i);
     }
+    axisX->setRange(-0.5, qMax(dates.size() - 0.5, 0.5));
     chart->addAxis(axisX, Qt::AlignBottom);
     durationSeries->attachAxis(axisX);
     calSeries->attachAxis(axisX);
 
-    QValueAxis* axisY = new QValueAxis();
-    chart->addAxis(axisY, Qt::AlignLeft);
-    durationSeries->attachAxis(axisY);
-    calSeries->attachAxis(axisY);
+    // 设置双Y轴，分别显示时长和卡路里
+    QValueAxis* axisYDuration = new QValueAxis();
+    axisYDuration->setTitleText("时长(分钟)");
+    axisYDuration->setLabelFormat("%.0f");
+    axisYDuration->setMin(0);
+    chart->addAxis(axisYDuration, Qt::AlignLeft);
+    durationSeries->attachAxis(axisYDuration);
+
+    QValueAxis* axisYCal = new QValueAxis();
+    axisYCal->setTitleText("卡路里");
+    axisYCal->setLabelFormat("%.0f");
+    axisYCal->setMin(0);
+    chart->addAxis(axisYCal, Qt::AlignRight);
+    calSeries->attachAxis(axisYCal);
 
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignBottom);
 
+    if (dates.isEmpty()) {
+        chart->setTitle("运动趋势 (暂无数据)");
+    }
+
     sportChartView->setChart(chart);
+    sportChartView->setRenderHint(QPainter::Antialiasing);
 }
 
 void SportDietWidget::addDietDialog()
@@ -395,7 +435,7 @@ void SportDietWidget::editDietDialog()
     int dietId = dietTable->item(row, 0)->text().toInt();
     QString food = dietTable->item(row, 1)->text();
     float weight = dietTable->item(row, 2)->text().toFloat();
-    int mealType = dietTable->item(row, 4)->text().toInt();
+    int mealType = dietTable->item(row, 4)->data(Qt::UserRole).toInt();
 
     QDialog* dialog = new QDialog(this);
     dialog->setWindowTitle("修改饮食记录");
@@ -494,7 +534,9 @@ void SportDietWidget::loadDietData(const QString& startDate, const QString& endD
         dietTable->setItem(row, 1, new QTableWidgetItem(record.foodName));
         dietTable->setItem(row, 2, new QTableWidgetItem(QString::number(record.weight)));
         dietTable->setItem(row, 3, new QTableWidgetItem(QString::number(record.calorie)));
-        dietTable->setItem(row, 4, new QTableWidgetItem(mealNames[record.mealType]));
+        QTableWidgetItem* mealItem = new QTableWidgetItem(mealNames[record.mealType]);
+        mealItem->setData(Qt::UserRole, record.mealType); // 存储原始mealType值
+        dietTable->setItem(row, 4, mealItem);
         dietTable->setItem(row, 5, new QTableWidgetItem(record.recordTime));
     }
 

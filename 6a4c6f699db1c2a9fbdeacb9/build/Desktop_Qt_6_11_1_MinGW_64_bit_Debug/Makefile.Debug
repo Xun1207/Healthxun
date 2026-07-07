@@ -380,7 +380,7 @@ debug/moc_NotifyTool.cpp: ../../src/util/NotifyTool.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\util\NotifyTool.h -o debug\moc_NotifyTool.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\util\NotifyTool.h -o debug\moc_NotifyTool.cpp
 
 debug/moc_LoginDialog.cpp: ../../src/ui/LoginDialog.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
@@ -614,7 +614,7 @@ debug/moc_LoginDialog.cpp: ../../src/ui/LoginDialog.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\LoginDialog.h -o debug\moc_LoginDialog.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\LoginDialog.h -o debug\moc_LoginDialog.cpp
 
 debug/moc_RegisterDialog.cpp: ../../src/ui/RegisterDialog.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
@@ -848,7 +848,7 @@ debug/moc_RegisterDialog.cpp: ../../src/ui/RegisterDialog.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\RegisterDialog.h -o debug\moc_RegisterDialog.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\RegisterDialog.h -o debug\moc_RegisterDialog.cpp
 
 debug/moc_MainWindow.cpp: ../../src/ui/MainWindow.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
@@ -1086,6 +1086,11 @@ debug/moc_MainWindow.cpp: ../../src/ui/MainWindow.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QRadioButton \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qradiobutton.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/service/UserService.h \
 		../../src/dao/UserDAO.h \
 		../../src/util/EncryptTool.h \
@@ -1190,7 +1195,7 @@ debug/moc_MainWindow.cpp: ../../src/ui/MainWindow.h \
 		../../src/dao/FoodStdDAO.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\MainWindow.h -o debug\moc_MainWindow.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\MainWindow.h -o debug\moc_MainWindow.cpp
 
 debug/moc_InfoWidget.cpp: ../../src/ui/InfoWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
@@ -1415,6 +1420,11 @@ debug/moc_InfoWidget.cpp: ../../src/ui/InfoWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QRadioButton \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qradiobutton.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/entity/User.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
 		../../src/service/UserService.h \
@@ -1425,7 +1435,7 @@ debug/moc_InfoWidget.cpp: ../../src/ui/InfoWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\InfoWidget.h -o debug\moc_InfoWidget.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\InfoWidget.h -o debug\moc_InfoWidget.cpp
 
 debug/moc_SportDietWidget.cpp: ../../src/ui/SportDietWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
@@ -1734,7 +1744,7 @@ debug/moc_SportDietWidget.cpp: ../../src/ui/SportDietWidget.h \
 		../../src/util/EncryptTool.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\SportDietWidget.h -o debug\moc_SportDietWidget.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\SportDietWidget.h -o debug\moc_SportDietWidget.cpp
 
 debug/moc_RemindWidget.cpp: ../../src/ui/RemindWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
@@ -1972,6 +1982,11 @@ debug/moc_RemindWidget.cpp: ../../src/ui/RemindWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/service/RemindService.h \
 		../../src/entity/Remind.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -1982,7 +1997,7 @@ debug/moc_RemindWidget.cpp: ../../src/ui/RemindWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QDateTime \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\RemindWidget.h -o debug\moc_RemindWidget.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\RemindWidget.h -o debug\moc_RemindWidget.cpp
 
 debug/moc_ReportWidget.cpp: ../../src/ui/ReportWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
@@ -2214,6 +2229,8 @@ debug/moc_ReportWidget.cpp: ../../src/ui/ReportWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
 		C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
 		C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/service/ReportService.h \
 		../../src/entity/User.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -2227,7 +2244,7 @@ debug/moc_ReportWidget.cpp: ../../src/ui/ReportWidget.h \
 		../../src/util/FileTool.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\ReportWidget.h -o debug\moc_ReportWidget.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\ReportWidget.h -o debug\moc_ReportWidget.cpp
 
 debug/moc_AdminWidget.cpp: ../../src/ui/AdminWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
@@ -2486,7 +2503,7 @@ debug/moc_AdminWidget.cpp: ../../src/ui/AdminWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
 		debug/moc_predefs.h \
 		C:/Qt/6.11.1/mingw_64/bin/moc.exe
-	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h" -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/迅/AppData/Roaming/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a4c6f699db1c2a9fbdeacb9" -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\AdminWidget.h -o debug\moc_AdminWidget.cpp
+	C:\Qt\6.11.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/debug/moc_predefs.h -IC:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -IC:/Users/迅/Desktop/新建文件夹/6a4c6f699db1c2a9fbdeacb9 -IC:/Qt/6.11.1/mingw_64/include -IC:/Qt/6.11.1/mingw_64/include/QtCharts -IC:/Qt/6.11.1/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.11.1/mingw_64/include/QtWidgets -IC:/Qt/6.11.1/mingw_64/include/QtOpenGL -IC:/Qt/6.11.1/mingw_64/include/QtGui -IC:/Qt/6.11.1/mingw_64/include/QtSql -IC:/Qt/6.11.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\src\ui\AdminWidget.h -o debug\moc_AdminWidget.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -2679,6 +2696,10 @@ debug/main.o: ../../main.cpp C:/Qt/6.11.1/mingw_64/include/QtWidgets/QApplicatio
 		C:/Qt/6.11.1/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.11.1/mingw_64/include/QtGui/qguiapplication_platform.h \
+		C:/Qt/6.11.1/mingw_64/include/QtCore/QFile \
+		C:/Qt/6.11.1/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h \
+		C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
 		../../src/db/SqliteHelper.h \
 		C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlDatabase \
 		C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
@@ -2691,10 +2712,6 @@ debug/main.o: ../../main.cpp C:/Qt/6.11.1/mingw_64/include/QtWidgets/QApplicatio
 		C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \
 		C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlerror.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
-		C:/Qt/6.11.1/mingw_64/include/QtCore/QFile \
-		C:/Qt/6.11.1/mingw_64/include/QtCore/qfile.h \
-		C:/Qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h \
-		C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QDir \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qdir.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qdirlisting.h \
@@ -2773,6 +2790,11 @@ debug/main.o: ../../main.cpp C:/Qt/6.11.1/mingw_64/include/QtWidgets/QApplicatio
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QRadioButton \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qradiobutton.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/ui/SportDietWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtablewidget.h \
@@ -5072,7 +5094,8 @@ debug/SystemService.o: ../../src/service/SystemService.cpp ../../src/service/Sys
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
-		C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug
+		C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.11.1/mingw_64/include/QtCore/QDateTime
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\SystemService.o ..\..\src\service\SystemService.cpp
 
 debug/CalUtil.o: ../../src/util/CalUtil.cpp ../../src/util/CalUtil.h \
@@ -5865,7 +5888,9 @@ debug/LoginDialog.o: ../../src/ui/LoginDialog.cpp ../../src/ui/LoginDialog.h \
 		../../src/ui/RegisterDialog.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMessageBox \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmessagebox.h \
-		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsDropShadowEffect \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicseffect.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\LoginDialog.o ..\..\src\ui\LoginDialog.cpp
 
 debug/RegisterDialog.o: ../../src/ui/RegisterDialog.cpp ../../src/ui/RegisterDialog.h \
@@ -6339,6 +6364,11 @@ debug/MainWindow.o: ../../src/ui/MainWindow.cpp ../../src/ui/MainWindow.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QRadioButton \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qradiobutton.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/service/UserService.h \
 		../../src/dao/UserDAO.h \
 		../../src/util/EncryptTool.h \
@@ -6440,7 +6470,15 @@ debug/MainWindow.o: ../../src/ui/MainWindow.cpp ../../src/ui/MainWindow.h \
 		../../src/ui/AdminWidget.h \
 		../../src/service/SystemService.h \
 		../../src/entity/FoodStandard.h \
-		../../src/dao/FoodStdDAO.h
+		../../src/dao/FoodStdDAO.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QInputDialog \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qinputdialog.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QButtonGroup \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qbuttongroup.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MainWindow.o ..\..\src\ui\MainWindow.cpp
 
 debug/InfoWidget.o: ../../src/ui/InfoWidget.cpp ../../src/ui/InfoWidget.h \
@@ -6666,6 +6704,11 @@ debug/InfoWidget.o: ../../src/ui/InfoWidget.cpp ../../src/ui/InfoWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QRadioButton \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qradiobutton.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/entity/User.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
 		../../src/service/UserService.h \
@@ -6677,9 +6720,7 @@ debug/InfoWidget.o: ../../src/ui/InfoWidget.cpp ../../src/ui/InfoWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMessageBox \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
-		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
-		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\InfoWidget.o ..\..\src\ui\InfoWidget.cpp
 
 debug/SportDietWidget.o: ../../src/ui/SportDietWidget.cpp ../../src/ui/SportDietWidget.h \
@@ -7237,6 +7278,11 @@ debug/RemindWidget.o: ../../src/ui/RemindWidget.cpp ../../src/ui/RemindWidget.h 
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
 		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/service/RemindService.h \
 		../../src/entity/Remind.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -7481,6 +7527,8 @@ debug/ReportWidget.o: ../../src/ui/ReportWidget.cpp ../../src/ui/ReportWidget.h 
 		C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
 		C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
 		C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		../../src/service/ReportService.h \
 		../../src/entity/User.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -7772,7 +7820,9 @@ debug/AdminWidget.o: ../../src/ui/AdminWidget.cpp ../../src/ui/AdminWidget.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
 		C:/Qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
-		C:/Qt/6.11.1/mingw_64/include/QtCore/QDir
+		C:/Qt/6.11.1/mingw_64/include/QtCore/QDir \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHeaderView \
+		C:/Qt/6.11.1/mingw_64/include/QtWidgets/qheaderview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\AdminWidget.o ..\..\src\ui\AdminWidget.cpp
 
 debug/qrc_resources.o: debug/qrc_resources.cpp 

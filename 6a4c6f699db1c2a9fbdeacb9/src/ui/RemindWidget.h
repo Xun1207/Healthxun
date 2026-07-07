@@ -9,6 +9,8 @@
 #include <QComboBox>
 #include <QTimeEdit>
 #include <QCheckBox>
+#include <QFormLayout>
+#include <QGroupBox>
 #include "../service/RemindService.h"
 #include "../dao/RemindDAO.h"
 #include "../entity/Remind.h"

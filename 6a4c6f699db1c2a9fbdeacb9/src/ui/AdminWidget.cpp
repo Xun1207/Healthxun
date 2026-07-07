@@ -2,21 +2,33 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDir>
+#include <QHeaderView>
+#include <QDateTime>
 
 AdminWidget::AdminWidget(QWidget* parent)
     : QWidget(parent)
 {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    mainLayout->setContentsMargins(20, 20, 20, 20);
+    mainLayout->setSpacing(15);
+
+    QLabel* titleLabel = new QLabel("⚙️ 管理员后台", this);
+    titleLabel->setObjectName("titleLabel");
+    mainLayout->addWidget(titleLabel);
 
     tabWidget = new QTabWidget(this);
     mainLayout->addWidget(tabWidget);
 
     userTab = new QWidget(this);
     QVBoxLayout* userLayout = new QVBoxLayout(userTab);
+    userLayout->setContentsMargins(15, 15, 15, 15);
+    userLayout->setSpacing(12);
 
     QHBoxLayout* userBtnLayout = new QHBoxLayout();
-    freezeBtn = new QPushButton("冻结/解冻", this);
-    resetPwdBtn = new QPushButton("重置密码", this);
+    freezeBtn = new QPushButton("🔒 冻结/解冻", this);
+    freezeBtn->setObjectName("warningBtn");
+    resetPwdBtn = new QPushButton("🔑 重置密码", this);
+    userBtnLayout->addStretch();
     userBtnLayout->addWidget(freezeBtn);
     userBtnLayout->addWidget(resetPwdBtn);
     userLayout->addLayout(userBtnLayout);
@@ -24,17 +36,24 @@ AdminWidget::AdminWidget(QWidget* parent)
     userTable = new QTableWidget(this);
     userTable->setColumnCount(6);
     userTable->setHorizontalHeaderLabels({"ID", "用户名", "姓名", "年龄", "管理员", "冻结状态"});
+    userTable->setAlternatingRowColors(true);
+    userTable->horizontalHeader()->setStretchLastSection(true);
     userLayout->addWidget(userTable);
 
-    tabWidget->addTab(userTab, "用户管理");
+    tabWidget->addTab(userTab, "👥 用户管理");
 
     foodTab = new QWidget(this);
     QVBoxLayout* foodLayout = new QVBoxLayout(foodTab);
+    foodLayout->setContentsMargins(15, 15, 15, 15);
+    foodLayout->setSpacing(12);
 
     QHBoxLayout* foodBtnLayout = new QHBoxLayout();
-    addFoodBtn = new QPushButton("新增食物", this);
-    editFoodBtn = new QPushButton("修改热量", this);
-    deleteFoodBtn = new QPushButton("删除食物", this);
+    addFoodBtn = new QPushButton("➕ 新增食物", this);
+    addFoodBtn->setObjectName("successBtn");
+    editFoodBtn = new QPushButton("✏️ 修改热量", this);
+    deleteFoodBtn = new QPushButton("🗑️ 删除食物", this);
+    deleteFoodBtn->setObjectName("delBtn");
+    foodBtnLayout->addStretch();
     foodBtnLayout->addWidget(addFoodBtn);
     foodBtnLayout->addWidget(editFoodBtn);
     foodBtnLayout->addWidget(deleteFoodBtn);
@@ -43,29 +62,58 @@ AdminWidget::AdminWidget(QWidget* parent)
     foodTable = new QTableWidget(this);
     foodTable->setColumnCount(3);
     foodTable->setHorizontalHeaderLabels({"ID", "食物名称", "每100g热量(卡)"});
+    foodTable->setAlternatingRowColors(true);
+    foodTable->horizontalHeader()->setStretchLastSection(true);
     foodLayout->addWidget(foodTable);
 
-    tabWidget->addTab(foodTab, "食物标准库");
+    tabWidget->addTab(foodTab, "🍎 食物标准库");
 
     backupTab = new QWidget(this);
     QVBoxLayout* backupLayout = new QVBoxLayout(backupTab);
+    backupLayout->setContentsMargins(30, 30, 30, 30);
+    backupLayout->setSpacing(20);
+    backupLayout->addStretch();
 
-    backupBtn = new QPushButton("全局数据备份", this);
-    restoreBtn = new QPushButton("恢复数据库", this);
-    backupLayout->addWidget(backupBtn);
-    backupLayout->addWidget(restoreBtn);
+    QLabel* backupTipLabel = new QLabel("💾 数据备份与恢复", this);
+    backupTipLabel->setStyleSheet("font-size: 18px; font-weight: bold;");
+    backupTipLabel->setAlignment(Qt::AlignCenter);
+    backupLayout->addWidget(backupTipLabel);
 
-    tabWidget->addTab(backupTab, "数据备份");
+    QLabel* backupDescLabel = new QLabel("定期备份数据库可防止数据丢失，恢复将覆盖当前数据。", this);
+    backupDescLabel->setStyleSheet("color: #909399;");
+    backupDescLabel->setAlignment(Qt::AlignCenter);
+    backupLayout->addWidget(backupDescLabel);
+    backupLayout->addSpacing(20);
+
+    backupBtn = new QPushButton("💾 全局数据备份", this);
+    backupBtn->setMinimumHeight(45);
+    backupBtn->setObjectName("successBtn");
+    restoreBtn = new QPushButton("📂 恢复数据库", this);
+    restoreBtn->setMinimumHeight(45);
+    restoreBtn->setObjectName("warningBtn");
+    backupLayout->addWidget(backupBtn, 0, Qt::AlignCenter);
+    backupLayout->addWidget(restoreBtn, 0, Qt::AlignCenter);
+    backupLayout->addStretch();
+
+    tabWidget->addTab(backupTab, "💾 数据备份");
 
     feedbackTab = new QWidget(this);
     QVBoxLayout* feedbackLayout = new QVBoxLayout(feedbackTab);
+    feedbackLayout->setContentsMargins(15, 15, 15, 15);
+
+    QLabel* feedbackTitle = new QLabel("💬 用户反馈列表", this);
+    feedbackTitle->setStyleSheet("font-size: 14px; font-weight: bold; padding: 5px 0;");
+    feedbackLayout->addWidget(feedbackTitle);
 
     feedbackTable = new QTableWidget(this);
     feedbackTable->setColumnCount(4);
     feedbackTable->setHorizontalHeaderLabels({"ID", "用户名", "反馈内容", "提交时间"});
+    feedbackTable->setAlternatingRowColors(true);
+    feedbackTable->horizontalHeader()->setStretchLastSection(true);
+    feedbackTable->setColumnWidth(2, 400);
     feedbackLayout->addWidget(feedbackTable);
 
-    tabWidget->addTab(feedbackTab, "用户反馈");
+    tabWidget->addTab(feedbackTab, "💬 用户反馈");
 
     connect(freezeBtn, &QPushButton::clicked, this, &AdminWidget::freezeUserAccount);
     connect(resetPwdBtn, &QPushButton::clicked, this, &AdminWidget::resetUserPwd);

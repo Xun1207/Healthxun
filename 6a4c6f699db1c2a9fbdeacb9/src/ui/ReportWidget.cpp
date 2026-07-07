@@ -6,26 +6,34 @@ ReportWidget::ReportWidget(int userId, QWidget* parent)
     : QWidget(parent), currentUserId(userId)
 {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    mainLayout->setContentsMargins(30, 30, 30, 30);
+    mainLayout->setSpacing(18);
 
-    QLabel* titleLabel = new QLabel("月度健康报表", this);
-    titleLabel->setStyleSheet("font-size: 20px; font-weight: bold;");
+    QLabel* titleLabel = new QLabel("📊 月度健康报表", this);
+    titleLabel->setObjectName("titleLabel");
     mainLayout->addWidget(titleLabel);
-    mainLayout->addSpacing(20);
 
-    QHBoxLayout* topLayout = new QHBoxLayout();
+    QGroupBox* selectGroup = new QGroupBox("报表选项", this);
+    QHBoxLayout* topLayout = new QHBoxLayout(selectGroup);
+    topLayout->setSpacing(15);
     QLabel* monthLabel = new QLabel("选择月份:", this);
     monthEdit = new QDateEdit(QDate::currentDate(), this);
     monthEdit->setDisplayFormat("yyyy-MM");
-    generateBtn = new QPushButton("生成报表", this);
-    exportBtn = new QPushButton("导出报表", this);
+    generateBtn = new QPushButton("📈 生成报表", this);
+    generateBtn->setObjectName("successBtn");
+    exportBtn = new QPushButton("💾 导出报表", this);
+    exportBtn->setObjectName("warningBtn");
     topLayout->addWidget(monthLabel);
     topLayout->addWidget(monthEdit);
+    topLayout->addStretch();
     topLayout->addWidget(generateBtn);
     topLayout->addWidget(exportBtn);
-    mainLayout->addLayout(topLayout);
+    mainLayout->addWidget(selectGroup);
 
     reportText = new QTextEdit(this);
     reportText->setReadOnly(true);
+    reportText->setStyleSheet("font-size: 14px; line-height: 1.6; padding: 10px;");
+    reportText->setPlaceholderText("点击“生成报表”按钮查看本月健康统计...");
     mainLayout->addWidget(reportText);
 
     connect(generateBtn, &QPushButton::clicked, this, &ReportWidget::generateMonthReport);

@@ -18,13 +18,13 @@ bool SportDAO::addSportRecord(const SportRecord& record)
 bool SportDAO::updateSportRecord(const SportRecord& record)
 {
     SqliteHelper* dbHelper = SqliteHelper::getInstance();
+    // 修改时不更新record_date，保持原记录日期不变
     QString sql = QString("UPDATE sport_record SET sport_type='%1', duration=%2, distance=%3, "
-                          "calorie_burn=%4, record_date='%5' WHERE record_id=%6")
+                          "calorie_burn=%4 WHERE record_id=%5")
                       .arg(record.sportType)
                       .arg(record.duration)
                       .arg(record.distance)
                       .arg(record.calorieBurn)
-                      .arg(record.recordDate)
                       .arg(record.recordId);
     return dbHelper->execSqlNoQuery(sql);
 }
